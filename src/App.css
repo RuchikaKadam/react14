@@ -1,42 +1,126 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Monoton:wght@200;300;400;500;600;700;800&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  list-style: none;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body {
+  /* background: #80c0eb; */
+  align-items: center;
+  justify-content: center;
+}
+.container {
+  width: 600px;
+  /* background: #1c6fec; */
+  padding: 1rem;
+  margin: 3rem auto;
+  border-radius: 10px;
+}
+.container h1 {
   text-align: center;
+  /* font-family: 'Monoton'; */
+  /* color: rgb(160, 160, 161); */
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-weight: 400;
+  word-spacing: 5px;
+  letter-spacing: 5px;
+  padding: 2.4rem 0;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.inputField {
+  width: 100%;
+  padding: 5px 1rem;
+  background: #353a3b;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.inputField input {
+  background: transparent;
+  padding: 10px;
+  color: rgb(160, 160, 161);
+  font-size: 1rem;
+}
+.inputField input::placeholder {
+  color: rgb(161, 160, 160);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.inputField .input-btn {
+  background: #7575ee;
+  color: #fff;
+  font-size: 1rem;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 70%;
+  cursor: pointer;
+  transition: all 0.5s;
 }
 
-.card {
-  padding: 2em;
+.inputField .input-btn:hover {
+  transform: rotate(90deg);
 }
 
-.read-the-docs {
-  color: #888;
+/* to do list style */
+.groceryList {
+  margin-top: 2rem;
+}
+.groceryList span {
+  color: rgb(161, 160, 160);
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.groceryList .list-items {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+}
+.list-items .items {
+  background: #7575ee;
+  border-radius: 10px;
+  padding: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: rgb(18, 71, 230) !important;
+}
+input[type='checkbox'] {
+  padding: 5px;
+  cursor: pointer;
+}
+.items-text {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: #ffffff;
+}
+
+.delete-btn {
+  cursor: pointer;
+  border-radius: 5%;
+  padding: 5px;
+  display: block;
+}
+.delete-btn:hover {
+  background: #3f3f40;
+  transition: 0.3s;
+  border-radius: 2px;
+}
+
+.isChecked {
+  text-decoration: line-through;
+  opacity: 0.5;
 }
